@@ -1779,6 +1779,56 @@ header .logo a {
 }
 
 
+/* Fix portfolio layout - 2x2 grid with same size */
+.portfolio-content .col-twelve {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.bgrid {
+    margin: 0 !important;
+}
+
+.folio-item {
+    width: 100%;
+}
+
+.simple-link img {
+    width: 100%;
+    height: 250px; /* Fixed height for all images */
+    object-fit: cover; /* Ensures images fill the space without distortion */
+    display: block;
+}
+
+.project-info {
+    padding: 15px;
+    background: #f9f9f9;
+    text-align: center;
+    height: 80px; /* Fixed height for text area */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-info h3 {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.project-info span {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .portfolio-content .col-twelve {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+}
+
+
 /** 
  * ===================================================================
  * 13. portfolio - (_layout.scss)
